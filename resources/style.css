@@ -1,0 +1,264 @@
+/* Main Styling */
+html {
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+/* Header Section*/
+.header {
+  position: absolute; /* change for smaller */
+  max-width: 960px; /* change for smaller */
+  left: 0;
+  right: 0;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  color: white;
+  background-color: cadetblue;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  align-self: center;
+}
+
+.mobile-nav {
+  align-self: center;
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.nav span, .mobile-nav span {
+  padding: 1rem 1rem;
+  font-size: 1rem;
+}
+
+
+/* Title Section */
+.title {
+  height: 30rem;
+  width: auto;
+  background-image: url(./img/glasses-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  margin-bottom: 3rem;
+}
+
+.title .container .headline {
+  position: relative;
+  top: 10rem;
+  padding: 1.5rem 5rem;
+  background-color: white;
+  float: right;
+  margin-right: -2rem;
+}
+
+.title .container h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Main Section */
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.column, .exam {
+  display: block;
+  width: 5rem;
+  margin: 0.5rem 3rem;
+  text-align: center;
+}
+
+.exam {
+  width: 7rem;
+  margin-right: 1rem;
+}
+
+.column img {
+  width: 5rem;
+  height: auto;
+}
+
+.exam img {
+  width: 3rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.less460 {
+  display: none;
+}
+
+/* Other */
+.text-blocks {
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.text {
+  display: flex;
+  flex-flow: column;
+  padding: 0 2.5%;
+  width: 35%;
+}
+
+.text-title {
+  background-color: cadetblue;
+  width: 10rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+.paragraph {
+  padding-top: 1rem;
+}
+
+/* Footer Section */
+.footer {
+  padding: 4rem 0 4rem 4rem;
+  background-color: azure;
+
+  max-width: 888px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 960px) {
+  /* Header changes for screen < 960px */
+  .header {
+    margin: 0 auto;
+    }
+
+  /* Title changes for screen < 960px */
+  .title {
+    height: 22rem;
+  }
+  .title .container .headline {
+    position: relative;
+    top: 5rem;
+    padding: 0.75rem 4rem;
+    margin-right: 2rem;
+  }
+  .title .container h1 {
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  /* Header changes for screen < 470px */
+  .logo span {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+
+  /* Title changes for screen < 470px */
+  .title {
+    height: 17rem;
+    background-position: 20%;
+  }
+  .title .container .headline {
+    position: relative;
+    top: 9rem;
+    padding: 1rem 0;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .title .container h1 {
+    font-size: 1rem;
+  }
+
+  /* Main changes for screen < 470px */
+  .main {
+    flex-flow: column;
+    align-items: center;
+    margin-top: 3.77rem;
+  }
+  .more460 {
+    display: none;
+  }
+  .less460 {
+    display: block;
+  }
+  .column, .exam {
+    width: 7rem;
+    margin-top: 1.54rem;
+    text-align: center;
+  }
+
+  /* Other changes for screen < 470px */
+  .text-blocks {
+    margin-top: -5rem;
+    flex-flow: column;
+    padding-top: 0;
+    align-items: center;
+  }
+  .text {
+    width: 100%;
+  }
+  .text-title {
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  .paragraph {
+    font-size: 0.77rem;
+    padding: 1rem 0.5rem 4rem 0.5rem;
+  }
+  .footer {
+    margin-top: 0rem;
+    padding: 4rem 4rem 4rem 4rem;
+  }
+  .logo img {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
